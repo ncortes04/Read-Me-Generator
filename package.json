@@ -1,0 +1,23 @@
+{
+  "name": "read-me-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncortes04/Read-Me-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncortes04/Read-Me-Generator/issues"
+  },
+  "homepage": "https://github.com/ncortes04/Read-Me-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
