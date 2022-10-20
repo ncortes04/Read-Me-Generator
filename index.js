@@ -104,7 +104,7 @@ const questions  = [
       //references
       const reference = response.reference
       const referenceARR = reference.split(re)
-      var fileString = `# ${title} \n ![badge](${badgeURL}) \n ## Description \n * ${descripARR[0]} \n * ${descripARR[1]} \n * ${descripARR[2]} \n * ${descripARR[3]} \n ## Table of Contents \n ## Installation \n ${installation} \n ## Usage \n ${usageARR[0]} \n ![Screenshot](${usageARR[1]}) \n My fellow collaborators are ${collaboratorsARR} And my Third Party sources were ${referenceARR} \n ## License \n Copyright (c) ${gitUsername}. All rights reserved. \n Licensed under the ${license} license.
+      var fileString = `# ${title} \n ![badge](${badgeURL}) \n ## Description \n * ${descripARR[0]} \n * ${descripARR[1]} \n * ${descripARR[2]} \n * ${descripARR[3]} \n ## Table of Contents \n ## Installation \n ${installation} \n ## Usage \n ${usageARR[0]} \n ![Screenshot](https${usageARR[1]}) \n My fellow collaborators are ${collaboratorsARR} And my Third Party sources were ${referenceARR} \n ## License \n Copyright (c) ${gitUsername}. All rights reserved. \n Licensed under the ${license} license.
 
 
       
