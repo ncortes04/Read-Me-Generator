@@ -52,7 +52,7 @@ const questions  = [
     {
       //third party Apis
       type: 'input',
-      message: "If you used and thirs party sources list them seperated by commas",
+      message: "If you used and third party sources list them seperated by commas",
       name: 'reference',  
     },
     {
@@ -100,11 +100,18 @@ const questions  = [
       var badgeURL = `https://img.shields.io/badge/License-${license}%202.0-blue.svg`
       
       //license
+
       //references
       const reference = response.reference
       const referenceARR = reference.split(re)
+      var fileString = `# ${title} \n ${badgeURL} \n ## Description \n * ${descripARR[0]} \n * ${descripARR[1]} \n * ${descripARR[2]} \n * ${descripARR[3]} \n ## Table of Contents \n ## Installation \n ${installation} \n ## Usage \n ${usageARR[0]} \n ${usageARR[1]} \n My fellow collaborators are ${collaboratorsARR} And my Third Party sources were ${referenceARR} \n ## License \n Copyright (c) ${gitUsername}. All rights reserved. \n Licensed under the ${license} license.
+
+
+      
+      `
+    
       //must have https to finish link
-      fs.writeFile('Output.txt', badgeURL, (err) => {
+      fs.writeFile('README.md', fileString, (err) => {
       
         // In case of a error throw err.
         if (err) throw err;
