@@ -41,7 +41,7 @@ const questions  = [
       //Installation question
       type: 'input',
       message: "What are the steps necessary to install or acces your program",
-      name: 'Installation',  
+      name: 'installation',  
     },
     {
       //Usage question
@@ -66,6 +66,12 @@ const questions  = [
       type: 'input',
       message: "Provide a link to a badge (optional)",
       name: 'collaborators',  
+    },
+    {
+      //third party Apis
+      type: 'input',
+      message: "Provide you Email address and instructions to contact you",
+      name: 'email',  
     },
     {
       type: 'list',
@@ -98,13 +104,13 @@ const questions  = [
       var gitUsername = response.gitUsername
       var license = response.license
       var badgeURL = `https://img.shields.io/badge/License-${license}%202.0-blue.svg`
-      
-      //license
-
+     
+      //email
+      var email = response.email
       //references
       const reference = response.reference
       const referenceARR = reference.split(re)
-      var fileString = `# ${title} \n ![badge](${badgeURL}) \n ## Description \n * ${descripARR[0]} \n * ${descripARR[1]} \n * ${descripARR[2]} \n * ${descripARR[3]} \n ## Table of Contents \n ## Installation \n ${installation} \n ## Usage \n ${usageARR[0]} \n ![Screenshot](https${usageARR[1]}) \n My fellow collaborators are ${collaboratorsARR} And my Third Party sources were ${referenceARR} \n ## License \n Copyright (c) ${gitUsername}. All rights reserved. \n Licensed under the ${license} license.
+      var fileString = `# ${title} \n ![badge](${badgeURL}) \n ## Description \n * ${descripARR[0]} \n * ${descripARR[1]} \n * ${descripARR[2]} \n * ${descripARR[3]} \n ## Table of Contents \n 1. [Description](#Descriptions)\n 2. [Installation](#Installation)\n 3. [Usage](#Usage)\n 4. [License](#License)\n 5. [Questions](#Questions) \n ## Installation \n ${installation} \n ## Usage \n ${usageARR[0]} \n ![Screenshot](https${usageARR[1]}) \n My fellow collaborators are ${collaboratorsARR} And my Third Party sources were ${referenceARR} \n ## License \n Copyright (c) ${gitUsername}. All rights reserved. \n Licensed under the ${license} license \n ## Questions \n ### Conatact me Via \n -[${gitUsername}](https://github.com/${gitUsername}/) \n -${email}.
 
 
       

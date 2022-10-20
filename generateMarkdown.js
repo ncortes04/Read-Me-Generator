@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  console.log(license)
+
 }
 
 // TODO: Create a function that returns the license link
@@ -16,7 +16,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 `;
-}
+}https://img.shields.io/apm/l/
 module.exports = {
-  hello
+  
 }
